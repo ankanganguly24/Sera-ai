@@ -2,32 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: #f0f5f9;
+    --foreground: #1e2022;
+    --card: #f0f5f9;
+    --card-foreground: #1e2022;
+    --popover: #f0f5f9;
+    --popover-foreground: #1e2022;
+    --primary: #6a381f;
+    --primary-foreground: #ffffb3;
+    --secondary: #774e24;
+    --secondary-foreground: #1e2022;
+    --muted: #6e0d25;
+    --muted-foreground: #1e2022;
+    --accent: #dcab6b;
+    --accent-foreground: #1e2022;
+    --destructive: #d9534f;
+    --destructive-foreground: #f0f5f9;
+    --border: #cdcdcd;
+    --input: #cdcdcd;
+    --ring: #1e2022;
+    --radius: 0.5rem;
+    --chart-1: #f29e4c;
+    --chart-2: #86c1b9;
+    --chart-3: #7a6563;
+    --chart-4: #ffd166;
+    --chart-5: #ef476f;
+  }
+
+  .dark {
+    --background: #1e2022;
+    --foreground: #f0f5f9;
+    --card: #1e2022;
+    --card-foreground: #f0f5f9;
+    --popover: #1e2022;
+    --popover-foreground: #f0f5f9;
+    --primary: #f0f5f9;
+    --primary-foreground: #1e2022;
+    --secondary: #2d4659;
+    --secondary-foreground: #f0f5f9;
+    --muted: #2d4659;
+    --muted-foreground: #cdcdcd;
+    --accent: #2d4659;
+    --accent-foreground: #f0f5f9;
+    --destructive: #d9534f;
+    --neutral: #fef7ff;
+    --destructive-foreground: #f0f5f9;
+    --border: #2d4659;
+    --input: #2d4659;
+    --ring: #819f7f;
+    --chart-1: #3a86ff;
+    --chart-2: #8338ec;
+    --chart-3: #ff006e;
+    --chart-4: #fb5607;
+    --chart-5: #ffbe0b;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
