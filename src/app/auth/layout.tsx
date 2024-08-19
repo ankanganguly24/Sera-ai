@@ -14,6 +14,9 @@ const layout = async ({ children }: Props) => {
 
   return (
     <div className="h-screen bg-neutral flex w-full justify-center">
+      <div className="block px-4 py-10 md:hidden font-semibold text-primary">
+        SeraAI
+      </div>
       <div className="hidden lg:flex flex-1 w-full max-h-full max-w-[800px] overflow-hidden relative flex-col pt-10 pl-24 gap-3">
         <h2 className="text-black md:text-4xl font-semibold">
           Welcome to <span className="underline text-accent">SeraAI!</span>
